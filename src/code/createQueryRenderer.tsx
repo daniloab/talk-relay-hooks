@@ -22,7 +22,9 @@ export default function createQueryRenderer(
                         }
 
                         if (props) {
-                            return <FragmentComponent {...this.props} query={props} />
+                            return <FragmentComponent
+                                {...this.props}
+                                query={props} />
                         }
 
                         return <span>loading</span>
