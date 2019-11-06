@@ -20,15 +20,19 @@ function PostList(props: Props) {
 
     return (
         <>
-            <p>{data.body?.text}</p>
+            <p>{data.post.title}</p>
+            <div>
+                <img src={data.post.image}/>
+                <span>{data.post.description}</span>
+            </div>
             <Button
                 onClick={() => {
                     startTransition(() => {
-                        refetch({lang: 'SPANISH'},
+                        refetch({postId: data.post.id},
                             {fetchPolicy: 'store-or-network'})}
                 });
                 }>
-                Translate Comment
+                Like
             </Button>
         </>
     );
