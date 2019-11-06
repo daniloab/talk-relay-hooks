@@ -1,9 +1,3 @@
-import Post_post from 'Post_post.graphql';
-
-const React = require('React');
-
-const {graphql, useFragment} = require('react-relay/hooks');
-
 type Props = {
     post: Post_post,
 };

@@ -66,10 +66,9 @@ export { default as theme } from './theme'
     { notes: "createQueryRenderer" },
     { range: [1,4], notes: 'props' },
     { range: [9, 10], notes: 'variables' },
-    { range: [11, 26], notes: 'queryRenderer' },
+    { range: [11, 28], notes: 'queryRenderer' },
   ]}
 />
-
 ---
 <CodeSurfer
   title="PostList"
@@ -80,8 +79,10 @@ export { default as theme } from './theme'
   steps={[
     { notes: "PostList Component" },
     { range: [1, 4], notes: 'props' },
-    { range: [5, 5], notes: 'variables' },
-    { range: [11, 14], notes: 'handleSubmit' },
+    { range: [6, 16], notes: 'component' },
+    { range: [18, 39], notes: 'refetchQuery' },
+    { range: [40, 45], notes: 'refetch' },
+    { range: [46, 65], notes: 'createQueryRenderer' },
   ]}
 />
 
@@ -95,8 +96,8 @@ export { default as theme } from './theme'
   steps={[
     { notes: "PostList Component" },
     { range: [1, 4], notes: 'props' },
-    { range: [5, 5], notes: 'variables' },
-    { range: [11, 14], notes: 'handleSubmit' },
+    { range: [5, 15], notes: 'component' },
+    { range: [17, 25], notes: 'fragment' },
   ]}
 />
 
@@ -179,7 +180,9 @@ export { default as theme } from './theme'
   lang="jsx"
   steps={[
     { notes: "Hook used to access data fetched by an earlier call to preloadQuery()." },
-    { notes: "This implements the 'Render-as-You-Fetch' pattern" }
+    { range: [3, 12], notes: "This implements the 'Render-as-You-Fetch' pattern" },
+    { range: [13, 20], notes: "We set on the hook" },
+    { range: [21, 35], notes: "Component" },
   ]}
 />
 
@@ -192,6 +195,8 @@ export { default as theme } from './theme'
   lang="jsx"
   steps={[
     { notes: "Hook used to fetch a GraphQL query during render." },
+    { range: [2, 15], notes: "We set on the hook" },
+    { range: [15, 25], notes: "Component" },
   ]}
 />
 
@@ -204,6 +209,9 @@ export { default as theme } from './theme'
   lang="jsx"
   steps={[
     { notes: "Hook used to fetch a GraphQL query during render." },
+    { range: [1, 3], notes: "Props" },
+    { range: [6, 16], notes: "useFragment" },
+    { range: [17, 27], notes: "useFragment" },
   ]}
 />
 
@@ -216,20 +224,22 @@ export { default as theme } from './theme'
   lang="jsx"
   steps={[
     { notes: "You can use useRefetchableFragment when you want to fetch and re-render a fragment with different data" },
+    { range: [1, 3], notes: "Props" },
+    { range: [6, 20], notes: "useFragment" },
+    { range: [21, 35], notes: "useFragment" },
   ]}
 />
 
 ---
-<CodeSurfer
-  title="usePaginationFragment"
-  code={require('!raw-loader!./code/hooks/usePaginationFragment.tsx')}
-  showNumbers={false}
-  dark={true}
-  lang="jsx"
-  steps={[
-    { notes: "You can use useRefetchableFragment when you want to fetch and re-render a fragment with different data" },
-  ]}
-/>
+## Real Application
+
+---
+## References
+
+- https://relay.dev/
+- https://reactjs.org/
+- https://github.com/relayjs/relay-examples
+- https://relay-modern-course.now.sh/packages/
 
 ---
 <Thanks />

@@ -1,9 +1,3 @@
-import type {PostQuery} from 'PostQuery.graphql';
-
-const React = require('React');
-
-const {graphql, useLazyLoadQuery} = require('react-relay/hooks');
-
 function App() {
     const data = useLazyLoadQuery<PostQuery>(
         graphql`

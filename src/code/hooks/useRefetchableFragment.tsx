@@ -1,29 +1,21 @@
-import PostListRefetchQuery from 'PostListRefetchQuery.graphql';
-import PostList_comment$key from 'PostList_comment.graphql';
-
-const React = require('React');
-const {useTransition} = require('React');
-
-// RN or WWW:
-const {graphql, useRefetchableFragment} = require('react-relay/hooks');
-
-
-type Props = {|
-    comment: PostList_comment$key,
-    |};
+type Props = {
+    post: PostList_post,
+};
 
 function PostList(props: Props) {
     const [startTransition] = useTransition();
-    const [data, refetch] = useRefetchableFragment<PostListRefetchQuery, _>(
+    const [data, refetch] =
+        useRefetchableFragment<PostListRefetchQuery, _>(
         graphql`
-      fragment PostList_comment on Comment
+      fragment PostList_post on Post
       @refetchable(queryName: "PostListRefetchQuery") {
-        body(lang: $lang) {
-          text
-        }
+        id
+        name
+        image
+        descriptiion
       }
     `,
-        props.comment,
+        props.post,
     );
 
     return (
@@ -32,7 +24,8 @@ function PostList(props: Props) {
             <Button
                 onClick={() => {
                     startTransition(() => {
-                        refetch({lang: 'SPANISH'}, {fetchPolicy: 'store-or-network'})}
+                        refetch({lang: 'SPANISH'},
+                            {fetchPolicy: 'store-or-network'})}
                 });
                 }>
                 Translate Comment

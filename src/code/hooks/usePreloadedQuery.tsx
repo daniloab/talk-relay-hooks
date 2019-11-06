@@ -1,8 +1,3 @@
-import {PostQuery} from 'PostQuery.graphql';
-
-const React = require('React');
-const {graphql, preloadQuery, usePreloadedQuery} = require('react-relay/hooks');
-
 const AppEnvironment = require('./AppEnvironment'); // user-defined
 
 const query = graphql`
