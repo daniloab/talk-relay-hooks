@@ -55,10 +55,12 @@ export const Feedback = () => (
       <FeedbackText>Give me a Feedback:</FeedbackText>
     </Center>
     <Center mt={60} mb={60}>
-      <QRCode
+    <QRCode
         value="https://entria.feedback.house/danilo"
         size={256}
-      />
+        bgColor='#272425'
+        fgColor='white'
+    />
     </Center>
     <Center>
       <FeedbackLink>https://entria.feedback.house/danilo</FeedbackLink>
