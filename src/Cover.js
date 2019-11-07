@@ -38,7 +38,7 @@ export const Cover = () => (
     <Center>
       <Img src={"./img/relay_logo.png"} width={300} />
       <Title mt={20}>Relay News</Title>
-      <Subtitle mt={20}>Hooks, Concurrency and Suspense</Subtitle>
+      <Subtitle mt={20}>Hooks, Concurrent and Suspense</Subtitle>
       <MeName mt={100}>Danilo Assis</MeName>
     </Center>
   </Root>
