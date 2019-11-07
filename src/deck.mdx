@@ -17,30 +17,12 @@ export { default as theme } from './theme'
 <Cover />
 ---
 <Intro />
----
-# Overview
 
-<ul>
-    <Appear>
-        <li>
-            createQueryRenderModern
-        </li>
-        <li>
-            QueryRenderer
-        </li>
-        <li>
-            FragmentContainer
-        </li>
-        <li>
-            Hooks
-        </li>
-    </Appear>
-</ul>
 ---
 ## Why Relay
 
 - declarative data
-- data-fetching
+- data fetching
 - colocation
 
 ---
@@ -56,53 +38,78 @@ export { default as theme } from './theme'
 <Img src="./img/mobile3.png" width="60%" />
 
 ---
+## Benefits and Caveats
+<ul>
+    <Appear>
+        <li>
+            Simple Code
+        </li>
+        <li>
+            Better UI Experience
+        </li>
+        <li>
+            Opposed to HOCs
+        </li>
+        <li>
+            React Concurrent Mode and Suspense
+        </li>
+    </Appear>
+</ul>
+
+---
+## React Concurrent Mode
+
+<ul>
+    <Appear>
+        <li>
+            What is
+        </li>
+        <li>
+            Interruptible Rendering
+        </li>
+        <li>
+            Intentional Loading
+        </li>
+        <li>
+            Still using react normally: state, props, hooks
+        </li>
+    </Appear>
+</ul>
+
+---
+## Suspense
+
+<ul>
+    <Appear>
+        <li>
+            What is
+        </li>
+        <li>
+            Mechanism, not library
+        </li>
+        <li>
+            What not to do
+        </li>
+        <li>
+            What Suspense do
+        </li>
+    </Appear>
+</ul>
+
+
+---
 <CodeSurfer
-  title="createQueryRenderer"
-  code={require('!raw-loader!./code/createQueryRenderer.tsx')}
+  title="Suspense"
+  code={require('!raw-loader!./code/Suspense.tsx')}
   showNumbers={false}
   dark={true}
   lang="jsx"
   steps={[
-    { notes: "createQueryRenderer" },
-    { range: [1,4], notes: 'props' },
-    { range: [10, 12], notes: 'variables' },
-    { range: [14, 33], notes: 'queryRenderer' },
-  ]}
-/>
----
-<CodeSurfer
-  title="PostList"
-  code={require('!raw-loader!./code/PostList.tsx')}
-  showNumbers={false}
-  dark={true}
-  lang="jsx"
-  steps={[
-    { notes: "PostList Component" },
-    { range: [1, 4], notes: 'props' },
-    { range: [6, 16], notes: 'component' },
-    { range: [18, 39], notes: 'refetchQuery' },
-    { range: [40, 45], notes: 'refetch' },
-    { range: [46, 65], notes: 'createQueryRenderer' },
+    { notes: "component that lets you “wait” for some code to load" },
   ]}
 />
 
 ---
-<CodeSurfer
-  title="Post"
-  code={require('!raw-loader!./code/Post.tsx')}
-  showNumbers={false}
-  dark={true}
-  lang="jsx"
-  steps={[
-    { notes: "PostList Component" },
-    { range: [1, 4], notes: 'props' },
-    { range: [5, 15], notes: 'component' },
-    { range: [17, 25], notes: 'fragment' },
-  ]}
-/>
-
----
-
 ## Relay Hooks
 <ul>
     <li>
@@ -126,25 +133,6 @@ export { default as theme } from './theme'
     <li>
         usePaginationFragment
     </li>
-</ul>
-
----
-## Benefits and Caveats
-<ul>
-    <Appear>
-        <li>
-            Simple Code
-        </li>
-        <li>
-            React Concurrency Mode and Suspense
-        </li>
-        <li>
-            APIS uncomplication
-        </li>
-        <li>
-            Opposed to HOCs
-        </li>
-    </Appear>
 </ul>
 
 ---
