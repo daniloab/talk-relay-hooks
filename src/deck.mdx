@@ -96,7 +96,6 @@ export { default as theme } from './theme'
     </Appear>
 </ul>
 
-
 ---
 <CodeSurfer
   title="Suspense"
@@ -106,6 +105,19 @@ export { default as theme } from './theme'
   lang="jsx"
   steps={[
     { notes: "component that lets you “wait” for some code to load" },
+  ]}
+/>
+
+
+---
+<CodeSurfer
+  title="Error Boundary"
+  code={require('!raw-loader!./code/ErrorBoundary.tsx')}
+  showNumbers={false}
+  dark={true}
+  lang="jsx"
+  steps={[
+    { notes: "React component to catch javascript errors anywhere" },
   ]}
 />
 
